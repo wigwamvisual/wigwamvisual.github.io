@@ -1,0 +1,34 @@
+$navigation-breakpoint: 600px;
+
+.header {
+	@extend %container;
+	margin-bottom: $collapse-padding;
+
+	@include breakpoint($navigation-breakpoint, up) {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: $collapse-padding;
+	}
+
+	&__logo-wrapper {
+		margin: 0;
+	}
+
+	&__logo-link {
+		@include type-scale(zeta);
+		display: block;
+		color: $text-color;
+	}
+
+	&__logo {
+		height: 1.6875rem;
+		width: 7rem;
+	}
+
+	&__navigation {
+		@include breakpoint($navigation-breakpoint - 1, down) {
+			margin-top: $collapse-padding / 2;
+		}
+	}
+}

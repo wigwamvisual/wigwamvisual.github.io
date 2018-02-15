@@ -1,0 +1,13 @@
+Title: Hill House
+
+----
+
+Description: A series of interior images for a rooftop extension to an existing tower. The images were used to convey materiality, quality of light and a suggestive furniture scheme. The starting point was an iterative Revit model which was built upon and all furnishings were added.
+
+----
+
+Copyright: 1
+
+----
+
+Displaywidth: single

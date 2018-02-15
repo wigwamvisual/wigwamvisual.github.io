@@ -1,0 +1,72 @@
+// @font-face {
+//   font-family: 'Brown';
+//   src: url('../../dist/fonts/lineto-brown-regular.eot'); /* IE9 Compat Modes */
+//   src: url('../../dist/fonts/lineto-brown-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//        url('../../dist/fonts/lineto-brown-regular.woff') format('woff'), /* Pretty Modern Browsers */
+//        url('../../dist/fonts/lineto-brown-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+//        url('../../dist/fonts/lineto-brown-regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+// }
+
+$font-stack: 'Raleway', sans-serif;
+
+
+/*  --------------------------------------------------- 
+		Scaling
+------------------------------------------------------- */
+
+@mixin type-scale($fontsize: zeta) {
+	
+	@each $breakpoint in $breakpoints {
+		$name: nth($breakpoint, 1);
+		$scale: map-get($modular-scale, scale-#{$name});
+		$font-size: map-get($scale, $fontsize);
+
+		@include breakpoint($name) {
+			font-size: #{$font-size}px;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-stack;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: .5rem;
+}
+
+h1 {
+	@include type-scale(alpha);
+}
+
+h2 {
+	@include type-scale(beta);
+}
+
+h4 {
+	@include type-scale(gamma);
+}
+
+h5 {
+	@include type-scale(delta);
+}
+
+h6 {
+	@include type-scale(epsilon);
+}
+
+html {
+	@include type-scale($fontsize: zeta);
+	color: $text-color;
+}
+
+body {
+	font-family: $font-stack;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	margin-top: 0;
+}

@@ -1,0 +1,39 @@
+Title: My First Blog
+
+----
+
+Description: 
+
+Hello this is my blog
+
+(image: http://wigwam/content/3-blog/1-my-first-blog/factotum-pictures-nissan-gt-r-2017-full-size-768x507.jpg)
+
+## Heading
+
+----
+
+Tags: Test,Test 2
+
+----
+
+Content: 
+
+This is my blog, doesn't it look great.
+
+(image: http://wigwam/content/3-blog/1-my-first-blog/factotum-pictures-nissan-gt-r-2017-full-size-768x507.jpg)
+
+----
+
+Coverimage: factotum-pictures-nissan-gt-r-2017-full-size-768x507.jpg
+
+----
+
+Articlecontent: This is my first blog innit
+
+----
+
+Summary: Factotum Pictures created a wonderful set of renders that were 100% CG, right down to the mountains in the background. We asked them to share just how they made these images!
+
+----
+
+Date: 2017-08-10

@@ -1,0 +1,142 @@
+.projects {
+	opacity: 0;
+	transition: opacity .5s ease;
+
+	&__gallery {
+		background: $white;
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: -9999;
+		transition: opacity .35s ease, z-index .5s step-end;
+
+		&--show {
+			z-index: 9999;
+			opacity: 1;
+			transition: opacity .35s ease, z-index .5s step-start;
+		}
+	}
+
+	&--show {
+		opacity: 1;
+	}
+
+	&__inner {
+		@extend %container;
+	}
+
+	&__items {
+		@include list-reset;
+		position: relative;
+		width: 100%;
+	}
+
+	&__item {
+		cursor: pointer;
+		list-style: none;
+		margin-bottom: 1.25rem;
+		overflow: hidden;
+		position: relative;
+		transition: transform .5s cubic-bezier(.17,.67,.5,.84);
+		width: 100%;
+
+		@include breakpoint(mobile-large) {
+			width: calc(50% - 1.2rem);
+		}
+
+		@include breakpoint(tablet) {
+			width: calc(50% - .6666rem);
+		}
+
+		@include breakpoint(desktop, up) {
+			width: calc(33.3333% - .9rem);
+
+			&--double {
+				width: calc(66.6666% - .6666rem);
+			}
+		}
+
+		// @include breakpoint(desktop-large) {
+		// 	width: calc(25% - 1.5rem);
+		// 	// width: 25%;
+
+		// 	&--double {
+		// 		width: calc(50% - .95rem);
+		// 	}
+		// }
+	}
+
+	&__item:hover & {
+		
+		&__item-wrapper {
+			transform: scale(1.11);
+			opacity: 1;
+			transition-delay: 0;
+		}
+
+		&__info,
+		&__image-count {
+			opacity: 1;
+			transform: translateY(0);
+			transition-delay: .175s;
+		}
+	}
+
+	&__thumbnail {
+		vertical-align: bottom;
+		width: 100%;
+	}
+
+	&__item-wrapper {
+		background: rgba($white, 0.70);
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		padding: 3rem;
+		top: 0;
+		transition: transform .35s ease, opacity .35s ease;
+		transition-delay: .175s;
+		width: 100%;
+	}
+
+	&__info,
+	&__image-count {
+		@include type-scale(zeta);
+		opacity: 0;
+		position: absolute;
+		transition: opacity .35s ease, transform .35s ease;
+	}
+
+	&__title {
+		margin-bottom: .5rem;
+	}
+
+	&__copyright {
+		@include type-scale(eta);
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	&__info {
+		color: $text-color;
+		transform: translateY(-10px);
+		padding: 2rem;
+		top: 0;
+	}
+
+	&__description {
+		@include type-scale(eta);
+		line-height: 170%;
+	}
+
+	&__image-count {
+		left: 2rem;
+		color: $grey;
+		bottom: 2rem;
+		transform: translateY(10px);
+	}
+}

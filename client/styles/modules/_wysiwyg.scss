@@ -1,0 +1,45 @@
+%wysiwyg {
+
+	h2, h3, h4, h5 {
+		margin-top: 3rem;
+		margin-bottom: 1rem;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	p {
+		line-height: 180%;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	strong {
+		font-weight: 700;
+	}
+
+	figure {
+		margin: 0;
+		padding: 0;
+
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+
+	img {
+		width: 100%;
+		margin: 0;
+	}
+
+	a {
+		text-decoration: underline;
+		color: $text-color;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,142 @@
+/*
+  Get the bound for a given breakpoint name
+
+  ---
+  Example usage
+
+   get-bound($breakpoint, $direction)
+  ---
+
+  @param $breakpoint:		The name of the breakpoint
+  @param $direction:		The direction of the breakpoint
+*/
+
+@function get-bound($breakpoint, $direction: false) {
+
+	$bound: 0;
+
+	@for $i from 1 through length($breakpoints) {
+		$break: nth(nth($breakpoints, $i), 1);
+		@if $break == $breakpoint {
+
+			@if $direction == up {
+				$bound: nth(nth($breakpoints, $i), 2);
+			} @else if $direction == down {
+				@if $i == length($breakpoints) {
+					$bound: 9999;
+				} @else {
+					$bound: nth(nth($breakpoints, $i+1), 2);
+				}
+			} 
+			
+		}
+	}
+
+	@return $bound;
+}
+
+
+
+/*
+	Return a given breakpoint's bounds
+
+	---
+	Example usage
+
+	get-breakpoint($min, $max);
+	---
+
+	@param $min:		The name of the breakpoint for the lower bound
+	@param $max:		The name of the breakpoint for the upper bound
+
+*/
+
+
+@function get-breakpoint($min, $max: false) {
+
+	// If the breakpoint doens't exist in settings
+	@if map-get($breakpoints, $min) == null {
+		@return false;
+	}
+
+	$lower: 0;
+	$upper: 9999;
+
+	@if $max == up {
+		// Breakpoint up
+		$lower: get-bound($min, up);
+	} @else if $max == down {
+		// Breakpoint down
+		$upper: get-bound($min, down);
+
+	} @else if $max == false {
+		// Single breakpoint
+		$lower: get-bound($min, up);
+		$upper: get-bound($min, down);
+
+	} @else {
+		// Between two breakpoints
+		$lower: get-bound($min, up);
+		$upper: get-bound($max, down);
+	}
+
+	@return (
+		$lower,
+		$upper
+	);
+}
+
+
+
+/*
+	Use breakpoint
+
+	---
+	Example usage
+
+	body {
+		@include breakpoint($name, $direction) {
+			background: red;
+		}
+	}
+	---
+
+	@param $name:					The name of the breakpoint, eg. phone. Must match existing breakpoint created using add-breakpoint()
+	@param $direction:		The direction of the breakpoint, eg. phone and up. False if not passed
+*/
+
+@mixin breakpoint($breakpoint, $direction: false) {
+
+	// Is it a pixel value breakpoint?
+	@if get-breakpoint($breakpoint) == false {
+		@if $direction == "down" {
+			@media screen and (max-width: $breakpoint) {
+				@content;
+			}
+		} @else {
+			@media screen and (min-width: $breakpoint) {
+				@content;
+			}
+		}
+	} @else {
+
+		// Get the breakpoint and the upper and min bounds
+		$break: get-breakpoint($breakpoint, $direction);
+		$min: #{nth($break, 1)}px;
+		$max: #{nth($break, 2) - 1}px;
+
+		@if $direction == "down" {
+			@media screen and (max-width: $max) {
+				@content;
+			}
+		} @else if $direction == "up" {
+			@media screen and (min-width: $min) {
+				@content;
+			}
+		} @else {
+			@media screen and (min-width: $min) and (max-width: $max) {
+				@content;
+			}
+		}
+	}
+}

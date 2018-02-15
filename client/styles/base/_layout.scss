@@ -1,0 +1,14 @@
+@mixin container($size: $max-width, $padding: $collapse-padding * 2) {
+	width: 100%;
+}
+
+
+%container {
+	@include container;
+}
+
+%container--large {
+	@include container($size: $max-width-large);
+	padding: $collapse-padding;
+}
+

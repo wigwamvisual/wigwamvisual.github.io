@@ -1,0 +1,13 @@
+Title: Cardiff Innovation Interactive
+
+----
+
+Description: A fully immersive interactive experience was created for the Cardiff Innovation Central Scheme. The application is fully VR ready and allowed the client to demonstrate the final build to potential tenants before work had begun on site. The project was fully remodelled and optimised to comply to game engine requirements, it was then brought into Unreal Engine and lit, textured and rendered for real-time use.
+
+----
+
+Copyright: 1
+
+----
+
+Displaywidth: single

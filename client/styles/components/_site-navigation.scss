@@ -1,0 +1,48 @@
+.site-navigation {
+
+	&__items {
+		@include list-reset;
+	}
+
+	&__item {
+		display: inline-block;
+		margin-right: 1rem;
+
+		@include breakpoint(tablet, up) {
+			margin-right: 2rem;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&--social {
+			margin-right: .5rem;
+		}
+	}
+
+	&__link {
+		color: $wigwam-blue;
+		position: relative;
+		text-decoration: none;
+
+		&:hover,
+		&--active {
+			text-decoration: underline;
+
+			.site-navigation__social-icon {
+				opacity: .75;
+			}
+		}
+	}
+
+	
+
+	&__social-icon {
+		width: 1.25rem;
+		height: 1.25rem;
+		vertical-align: text-bottom;
+		transition: opacity .35s ease;
+	}
+
+}

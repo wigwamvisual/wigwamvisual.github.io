@@ -1,1 +1,0 @@
-# wigwamvisual.github.io

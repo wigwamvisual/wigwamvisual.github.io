@@ -1,0 +1,54 @@
+.standard {
+	@extend %container;
+	max-width: 860px;
+	margin: 0 auto;
+
+	&__header {
+		margin-bottom: 2rem;
+	}
+
+	&__title {
+		margin-bottom: 0;
+	}
+
+	&__publish-date {
+        display: block;
+
+        margin-bottom: 1rem;
+
+        color: $grey;
+        @include type-scale(epsilon);
+    }
+
+	&__image {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	&__text {
+		@extend %wysiwyg;
+	}
+
+	&__contact {
+		margin-top: 3rem;
+	}
+
+	&__footer {
+		margin-top: 4rem;
+        padding-top: 1rem;
+
+		border-top: 1px solid lighten($grey, 40%);
+		text-align: right;
+	}
+
+	&__footer-link {
+		@include type-scale(theta);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+		color: $grey;
+
+        &:hover {
+            text-decoration: underline;
+        }
+	}
+}

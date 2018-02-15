@@ -1,0 +1,13 @@
+Title: Confucius
+
+----
+
+Description: A set of images created for the interiors team at Hawkins\Brown to convey a fit out and furniture strategy to clients, to help secure funding. 2D CAD and a basic model were provided and then extra building details were modelled. Materials and furniture were matched to specification.
+
+----
+
+Copyright: 1
+
+----
+
+Displaywidth: single

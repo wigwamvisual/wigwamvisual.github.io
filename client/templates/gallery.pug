@@ -1,0 +1,34 @@
+.gallery__nav.gallery__nav--previous
+	img(src="./client/dist/img/gallery-previous.png" class="gallery__arrow")
+.gallery__nav.gallery__nav--next
+	img(src="./client/dist/img/gallery-next.png" class="gallery__arrow")
+.gallery__close
+	img(src="./client/dist/img/close.png" class="gallery__arrow")
+
+
+ul.gallery__items
+	each image in images
+		li.gallery__item
+			.gallery__image-wrapper
+				- if(image.panoramaID != '')
+					iframe.gallery__panorama(class="theViewerEmbeddedClass",
+						srcdoc='<a style="display: block; position: absolute; width: 100%; height:100%; z-index: 9999;" href="https://theviewer.co/share/' + image.panoramaID + '" ><img style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); z-index: 100;" src="http://wigwamvisual.com/client/dist/img/pano.png"><img style="width:100%;position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%)" src="' + image.url + '"></a>'
+						allowfullscreen="true"
+						webkitallowfullscreen="true"
+						mozallowfullscreen="true"
+						oallowfullscreen="true"
+						scrolling="no"
+						msallowfullscreen="true")
+				- else
+					- if(image.videoID != '')
+							img.gallery__play-button(src="./client/dist/img/play.png")
+							img.gallery__image.gallery__image--video(src=image.url)
+							iframe.gallery__video(src="https://player.vimeo.com/video/" + image.videoID, frameborder="0",webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+					- else
+						img.gallery__image(src=image.url)
+			.gallery__info
+				h2.gallery__project-title= title 
+				span.gallery__caption= image.caption
+
+
+

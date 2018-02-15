@@ -1,0 +1,34 @@
+/*  --------------------------------------------------- 
+    Structure
+------------------------------------------------------- */
+
+$baseline: 10px;
+
+$breakpoints: (
+	mobile: 0,
+	mobile-large: 480,
+	tablet: 780,
+	desktop: 1024,
+	desktop-large: 1440
+);
+
+$collapse-padding: 3rem;
+
+$max-width: 72rem;
+$max-width-large: 92rem;
+
+$module-margin: 8rem;
+
+/*  --------------------------------------------------- 
+    Colours
+------------------------------------------------------- */
+
+$wigwam-bronze: #E5AF90;
+$wigwam-dark-bronze: #b1724e;
+$wigwam-blue: #070E45;
+
+$white: #fff;
+$black: #222223;
+$grey: #777;
+
+$text-color: $wigwam-blue;

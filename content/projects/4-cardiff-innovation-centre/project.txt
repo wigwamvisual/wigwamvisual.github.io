@@ -1,0 +1,13 @@
+Title: Cardiff Innovation Centre
+
+----
+
+Description: These images were used to highlight the entrance space, feature collaborative stair and multi functional exhibition space. A base Revit model was supplied which was optimised for rendering, then textured and lit it in 3ds Max. Firstly working alongside architects to test materiality and form,  final images were then created  which demonstrate the use of the space at different times.
+
+----
+
+Copyright: 1
+
+----
+
+Displaywidth: single

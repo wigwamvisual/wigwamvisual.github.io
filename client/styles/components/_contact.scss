@@ -1,0 +1,66 @@
+.contact {
+	margin-top: 4rem;
+
+	&__title {
+		@include type-scale(epsilon);
+		font-weight: 700;
+		margin-bottom: 2rem;
+	}
+
+	&__details {
+		@include clearfix;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__detail {
+		list-style: none;
+		display: block;
+
+		& + & {
+			margin-top: 1rem;
+		}
+		
+		@include breakpoint(tablet, up) {
+			width: 50%;
+			float: left;
+			
+			& + & {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__type {
+		display: block;
+		margin-bottom: .5rem;
+
+		@include type-scale(theta);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	&__email,
+	&__telephone {
+		@include type-scale(gamma);
+		color: $text-color;
+	}
+
+	&__type {
+		display: block;
+	}
+
+	&__email {
+		margin-right: 1rem;
+
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__telephone {
+
+	}
+}

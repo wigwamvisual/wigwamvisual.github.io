@@ -1,0 +1,13 @@
+Title: Alton Estate
+
+----
+
+Description: An animated fly through of the scheme was created to tie existing CGI's into the scheme and place them geographically on the site. Existing images were camera matched, and the animation was created in around a week, which was then used to give planners a more full understanding of the scheme.
+
+----
+
+Copyright: 1
+
+----
+
+Displaywidth: single

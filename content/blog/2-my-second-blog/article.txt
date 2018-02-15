@@ -1,0 +1,50 @@
+Title: My Second Blog
+
+----
+
+Description: My second blog
+
+----
+
+Tags: Test
+
+----
+
+Content: 
+
+This is my blog, doesn't it look great.
+
+(image: http://wigwam/content/3-blog/1-my-first-blog/factotum-pictures-nissan-gt-r-2017-full-size-768x507.jpg)
+
+----
+
+Test: 
+
+content:
+    label: Content
+    type: textarea
+
+----
+
+Articlecontent: 
+
+I’ve long referred to Color, Type and Icons as the “Big 3” of a (link: bbc.com text: system’s) visual language. All UI components — from Buttons on up — are built with them. But I left something out. Space, our final frontier.
+
+## Space Rivals Color
+Space is everywhere. CSS uses properties like padding, margin, and absolute positioning’s left, right, top and bottom to separate objects. Across five libraries (Bootstrap, Salesforce Lightning, Foundation, a previous project, and a current project), I compared occurrence of these space properties relative to property groups of color, size, type, layout and more.
+
+(image: http://wigwam/content/3-blog/1-my-first-blog/factotum-pictures-nissan-gt-r-2017-full-size-768x507.jpg)
+
+After removing effects (“zeroed” values like :0; and reserved terms like transparent or auto) where CSS already offers us a system for decisions, space rules appeared more than anything except color. Nothing else — not type, size, layout — was even close. There’s so much spatial complexity built into our libraries, let alone our products!
+
+----
+
+Coverimage: 
+
+----
+
+Summary: “El-Qird Beyitkallem” (translated as “Monkey Talks”) is an Egyptian movie released in January 2017. The story centers around two brothers who plan to free their father using their skills as magicians, and all the VFX in the movie were created by Meda, using Corona Renderer. We spoke with him about his workflow on the movie.
+
+----
+
+Date: 2017-08-03
